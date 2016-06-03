@@ -1,7 +1,6 @@
 package org.glassfish.jersey.examples;
 
 import javax.inject.Inject;
-import javax.inject.Singleton;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -15,11 +14,8 @@ import javax.ws.rs.core.Response;
 public class MyJsonException {
 
     @Inject
-    @Singleton
     private UserManager userManager;
     
-    
-    private int x;
     /**
      * Method handling HTTP GET requests. The returned object will be sent
      * to the client as "text/plain" media type.
