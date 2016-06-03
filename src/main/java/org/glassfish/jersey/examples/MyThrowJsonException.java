@@ -15,10 +15,10 @@ import javax.ws.rs.core.Response;
 public class MyThrowJsonException {
 
     @Inject
-    UserManager userManager;
+    private UserManager userManager;
     
     
-    int x;
+    private int x;
     /**
      * Method handling HTTP GET requests. The returned object will be sent
      * to the client as "text/plain" media type.
@@ -29,7 +29,7 @@ public class MyThrowJsonException {
     @Produces(MediaType.APPLICATION_JSON)
     public Response getIt() {
         
-        throw new WebApplicationException("Errore ...", Response.status(404).entity(new String("{ \"errore\": \"errore\"}")).build());
+        throw new WebApplicationException("Errore ...", Response.status(404).entity(userManager).build());
         
     }
 }
